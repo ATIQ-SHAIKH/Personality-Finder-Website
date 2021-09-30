@@ -3,16 +3,10 @@
     margin: 0px;
 }
 
-body{
-    width: 100%;
-    height: 100%;
-    margin: 10px 0; /* Space from this element (entire page) and others*/
-    padding: 0; /*space from content and border*/
-    
-    overflow:auto;
-    display:block;
-    box-sizing:border-box;
-    /* background-image: url('car-purple.jpg'); */
+
+
+section{
+    margin: 10px;
 }
 
 nav{
@@ -67,3 +61,14 @@ hr{
     color: #87cac3;
     background-color: #87cac3;
 }
+
+.btn{
+    background-color: #87cac3;
+}
+
+.form-control{
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
