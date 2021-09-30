@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--BootStrap Css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Icon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title>Document</title>
 </head>
 <style>
@@ -11,134 +18,95 @@
     width: 100%;
     height: 100%;
     margin: 0; /* Space from this element (entire page) and others*/
-    padding: 5px; 
-    background-color: turquoise;
+    padding: 5px;
+    background-image: url(adrian-infernus-GLf7bAwCdYg-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; 
+}
+nav{
+    background-color:#41AB9C;
 }
 
-.container {
-    padding: 8px 16px;
+.d-flex {
+    margin: 150px 0 0 125px;
     width: 1270px;
-    height: 360px;
-    border: 1px solid black;
-    margin: 0 auto;
+    height: 345px;
 }
-
 .col{
     width: 250px;
-    height: 300px;
-    background-color: white;
-    float: left;
-    border: 2px solid black;
+    height: 400px;
     padding: 20px;
     margin: 10px;
     text-align: center;
     font-family: sans-serif;
-    font-weight: 100;
+    font-weight: 50;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    backdrop-filter: blur(1rem);
+    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0,0,0,0.5);
+    border-top-color: rgba(225,225,225,0.5);
+    border-left-color: rgba(225,225,225,0.5);
+    border-bottom-color: rgba(225,225,225,0.1);
+    border-right-color: rgba(225,225,225,0.1);
+    background-color:rgba(225,225,225,0.1)
+}
+.button{
+    margin-top: 100px;
+    text-align: center;
 }
 
-nav {
-        display: flex;
-        padding: 8px 16px;
-        justify-content: space-between;
-        align-items: center;
-    }
 
-    nav img {
-        width: 60px;
-    }
-
-    nav p {
-        color: rgb(0, 17, 255);
-        font-size: 30px;
-    }
-
-    .nav-links {
-        flex: 1;
-        text-align: right;
-    }
-
-    .nav-links ul li {
-        list-style: none;
-        display: inline-block;
-        padding: 8px 12px;
-        position: relative;
-    }
-
-    .nav-links ul li a {
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        font-size: 20px;
-    }
-
-    .hero-btn {
-        display: inline-block;
-        text-decoration: none;
-        color: #fff;
-        border: 1px solid #fff;
-        padding: 12px 34px;
-        background: transparent;
-    }
-
-    .hero-btn:hover {
-        border: 1px solid #f44336;
-        background: #f44336;
-        transition-duration: 1s;
-    }
-
-    .nav-links ul li ::after {
-        content: '';
-        width: 100%;
-        height: 2px;
-        background: #f44336;
-        display: block;
-        margin: auto;
-        transition: 0.5s;
-    }
-
-    .nav-links ul li:hover::after {
-        width: 100%;
-    }
-
-    .col p {
-        font-size: 18px;
-        color: rgb(51, 49, 49);
-    }
 
 </style>
 <body>
 
-    <nav>
-        <img src="https://cdn-icons-png.flaticon.com/128/3504/3504849.png">
-        <p><strong>Seikaku Finder</strong></p>
-        <div class="nav-links">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Language</a></li>
-                <li><a href="" class="hero-btn">LOGIN</a></li>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="logo.png" width="30" height="30" alt="logo"> Seikaku Finder</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="quiz.html">Take the test!</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About us</a>
+              </li>
             </ul>
           </div>
         </div>
-    </nav>
+      </nav>
 
-    <div class="container">
+    <div class="d-flex justify-content-evenly">
         <div class="col">
-            <h1>Extraversion & Introversion</h1>
+            <h2>Extraversion (E) & Introversion (I)</h2>
             <p>It is typically viewed as a single spectrum, so to be high<br> in one necessitates being low in the other</p>
         </div>
         <div class="col">
-            <h1>Sensing & Intuition</h1>
+            <h2>Sensing (S) & Intuition (N)</h2>
             <p>Sensing pays attention to physical reality and<br> Intuition pays attention to impression</p>
         </div>
         <div class="col">
-            <h1>Thinking & Feeling</h1>
+            <h2>Thinking (T) & Feeling (F)</h2>
             <p>Thinking people are objecive and they make decision based on facts whereas <br>Feeling people are subjective and they make decision based on principles and value</p>
         </div>
         <div class="col">
-            <h1>Judging & Perceiving</h1>
+            <h2>Judging (J) & Perceiving (P)</h2>
             <p>Judgers approach life in a structured, organized and carefully calibrated way and Perceivers approach life in a freewheeling, spontaneous way, preferring to keep their options open than make a clear plan of action </p>
         </div>
     </div>
-
+    <div class="button">
+        <a href="#" class="btn btn-outline-light" target="_blank">Know More</a>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -6,10 +6,13 @@ body{
 }
 nav{
     margin: 10px;
-}
+} 
 
-.navbar-brand{
+img {
     margin: 0 auto;
+}
+a {
+    text-align: center;
 }
 
 .jumbotron{
