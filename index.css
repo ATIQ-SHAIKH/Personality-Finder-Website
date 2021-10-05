@@ -13,7 +13,7 @@ nav{
 }
 
 .d-flex {
-    margin: 150px 0 0 125px;
+    margin: 50px 0 0 125px;
     width: 1270px;
     height: 345px;
 }
@@ -38,4 +38,18 @@ nav{
 .button{
     margin-top: 100px;
     text-align: center;
+}
+
+#already_taken{
+    text-decoration: none;
+    color: black;
+}
+
+#already_taken:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+.btn{
+    background-color: #41AB9C;
 }
