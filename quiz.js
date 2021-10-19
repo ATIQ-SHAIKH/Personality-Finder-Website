@@ -11,7 +11,7 @@ function evaluate(){
     for(let i = 1; i<=5; i++){
         thinking.push(document.form.thinking[i].value);
     }
-    document.write(check);
+    document.rewrite(check);
 };
 
 document.write("Working")
