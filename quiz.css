@@ -3,22 +3,19 @@
     margin: 0px;
 }
 
-body{
-    width: 100%;
-    height: 100%;
-    margin: 10px 0; /* Space from this element (entire page) and others*/
-    padding: 0; /*space from content and border*/
-    
-    overflow:auto;
-    display:block;
-    box-sizing:border-box;
-    /* background-image: url('car-purple.jpg'); */
+section{
+    background-image: url(szabo-viktor-28ZbKOWiZfs-unsplash.jpg);
 }
 
 nav{
-    background-color: #87cac3;
+    background-color: #41AB9C;
+    box-shadow: 2px 2px 10px black;
+    margin: 10px 0;
 }
 
+.container h1{
+    margin-top: 50px;
+}
 .radio{
     display: inline-flex;
     align-items: center;
@@ -34,7 +31,7 @@ nav{
 .radio__radio{
     width: 1.25em;
     height: 1.25em;
-    border: 2px solid #87cac3;
+    border: 2px solid #000000;
     border-radius: 50%;
     margin-left: 10px;
     box-sizing: border-box;
@@ -47,7 +44,7 @@ nav{
     width: 100%;
     height: 100%;
     display: block;
-    background: #87cac3;
+    background: black;
     border-radius: 50%;
 
     transform: scale(0);
@@ -66,4 +63,18 @@ nav{
 hr{
     color: #87cac3;
     background-color: #87cac3;
+}
+
+.btn{
+    background-color: #87cac3;
+    margin-bottom: 10px;
+}
+
+.form-control{
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+.form-group p{
+    margin: 10px;
 }
