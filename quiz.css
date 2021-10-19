@@ -29,9 +29,10 @@ nav{
 .radio__radio{
     width: 1.25em;
     height: 1.25em;
-    border: 2px solid #87cac3;
+    border: 2px solid #10917f;
     border-radius: 50%;
     margin-left: 10px;
+    margin-top: 15px;
     box-sizing: border-box;
     padding: 2px;
     padding-bottom: 2px;
@@ -42,7 +43,7 @@ nav{
     width: 100%;
     height: 100%;
     display: block;
-    background: #87cac3;
+    background: #10917f;
     border-radius: 50%;
 
     transform: scale(0);
