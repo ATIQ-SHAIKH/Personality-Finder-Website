@@ -9,7 +9,7 @@ function a(){
     let sensing = [];
     let intuition = [];
     let email = document.getElementById("inputemail").value;
-    console.log(email);
+    console.log(document.getElementById("inputemail").value);
 
     for(let i = 1; i<=5; i++){
         for(let j = 0; j<=4; j++){
@@ -190,24 +190,81 @@ function a(){
 
         let msg = "Working";
 
-        send_email(email, msg, category);
-
         console.log(category);
 
-        function send_email(email, msg, category){
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "atikshaikh436@gmail.com",
-                Password: "chnthykldcwsgnvd",
-                To: `${email}`,
-                From: "atikshaikh436@gmail.com",
-                Subject: `Hurray! you are The ${category}`,
-                Body: `${msg}`,
+        send_email(msg,category);
+        // window.open("inspector.html", '_blank');
 
-            }).then((message) => alert("Mail has been succesfully sent!"))
+        if(category === "The Inspector"){
+            window.open(inspector.html, '_blank');
+        }
+        if(category === "The Crafter"){
+            window.open("crafter.html", '_blank');
+        }
+        if(category === "The Protector"){
+            window.open("protector.html", '_blank');
+        }
+        if(category === "The Artist"){
+            window.open("artist.html", '_blank');
+        }
+        if(category === "The Advocate"){
+            window.open("advocate.html", '_blank');
+        }
+        if(category === "The Mediator"){
+            window.open("mediator.html", '_blank');
+        }
+        if(category === "The Architect"){
+            window.open("architect.html", '_blank');
+        }
+        if(category === "The Thinker"){
+            window.open("thinker.html", '_blank');
+        }
+        if(category === "The Persuader"){
+            window.open("persuader.html", '_blank');
+        }
+        if(category === "The Director"){
+            window.open("director.html", '_blank');
+        }
+        if(category === "The Performer"){
+            window.open("performer.html", '_blank');
+        }
+        if(category === "The Caregiver"){
+            window.open("caregiver.html", '_blank');
+        }
+        if(category === "The Champion"){
+            window.open("champion.html", '_blank');
+        }
+        if(category === "The Giver"){
+            window.open("giver.html", '_blank');
+        }
+        if(category === "The Debater"){
+            window.open("debater.html", '_blank');
+        }
+        if(category === "The Commander"){
+            window.open("commander.html", '_blank');
         }
 
     
 
     };
+
+
+    function send_email(msg, category){
+        let email = document.getElementById("inputemail").value;
+        console.log(email)
+        
+        Email.send({
+            Host: "smtp.gmail.com",
+            Username: "seikakufinder@gmail.com",
+            Password: "kzinlswhsgrwinfu",
+            To: email,
+            From: "seikakufinder@gmail.com",
+            Subject: "Results Has been declared through your mail" +email,
+            Body: msg + category
+          }).then(
+            (message) => alert("Mail has been sent!")
+          );
+        
+    }
+
 
