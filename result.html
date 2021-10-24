@@ -28,13 +28,13 @@
                 <a class="nav-link" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="quiz.html" target="_blank">Take the test!</a>
+                <a class="nav-link" href="quiz.html" >Take the test!</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="result.html" target="_blank">Result</a>
+                <a class="nav-link active" href="result.html" >Result</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html" target="_blank">About us</a>
+                <a class="nav-link" href="about.html" >About us</a>
               </li>
             </ul>
           </div>
@@ -43,12 +43,37 @@
       <main>
         <section>
         <div class="form-group">
+          <form action="javascript:sendmail()" method="post">
+            <input type="name" class="form-control" id="inputename" aria-describedby="nameHelp" placeholder="Enter Username">
             <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email to get results.">
             <p class="fw-bolder">We'll never share your email with anyone else.</p>
           </div>
           <button type="submit" class="btn btn-light">Get results!</button>
-          </section> 
+          </form>   
+        </section> 
       </main>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      
+      <script>
+        function sendmail() {
+          var name = $('#inputename').val();
+          var email = $('#inputemail').val();
+          var Body = 'Name:' +name +'Email: '+email;
+
+          Email.send({
+            Host: "smtp.gmail.com",
+            Username: "ytedwin1995@gmail.com",
+            Password: "kdxblogcqkrnegac",
+            To: email,
+            From: "ytedwin1995@gmail.com",
+            Subject: "Results Has been declared through your mail" +email,
+            Body: Body
+          }).then(
+            (message) => alert("Your mail has been send!")
+          );
+        }
+      </script>
 </body>
 </html>
