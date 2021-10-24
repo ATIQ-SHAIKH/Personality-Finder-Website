@@ -8,6 +8,8 @@ function a(){
     let perceiving = [];
     let sensing = [];
     let intuition = [];
+    let email = document.getElementById("inputemail").value;
+    console.log(email);
 
     for(let i = 1; i<=5; i++){
         for(let j = 0; j<=4; j++){
@@ -136,6 +138,75 @@ function a(){
 
         let user_pers = top_four.toString();
         console.log(user_pers);
+
+        if(user_pers.includes('I') && user_pers.includes('S') && user_pers.includes('T') && user_pers.includes('J')){
+            category = "The Inspector";
+        }
+        if(user_pers.includes('I') && user_pers.includes('S') && user_pers.includes('T') && user_pers.includes('P')){
+            category = "The Crafter";
+        }
+        if(user_pers.includes('I') && user_pers.includes('S') && user_pers.includes('F') && user_pers.includes('J')){
+            category = "The Protector";
+        }
+        if(user_pers.includes('I') && user_pers.includes('S') && user_pers.includes('F') && user_pers.includes('P')){
+            category = "The Artist";
+        }
+        if(user_pers.includes('I') && user_pers.includes('N') && user_pers.includes('F') && user_pers.includes('J')){
+            category = "The Advocate";
+        }
+        if(user_pers.includes('I') && user_pers.includes('N') && user_pers.includes('F') && user_pers.includes('P')){
+            category = "The Mediator";
+        }
+        if(user_pers.includes('I') && user_pers.includes('N') && user_pers.includes('T') && user_pers.includes('J')){
+            category = "The Architect";
+        }
+        if(user_pers.includes('I') && user_pers.includes('N') && user_pers.includes('T') && user_pers.includes('P')){
+            category = "The Thinker";
+        }
+        if(user_pers.includes('E') && user_pers.includes('S') && user_pers.includes('T') && user_pers.includes('P')){
+            category = "The Persuader";
+        }
+        if(user_pers.includes('E') && user_pers.includes('S') && user_pers.includes('T') && user_pers.includes('J')){
+            category = "The Director";
+        }
+        if(user_pers.includes('E') && user_pers.includes('S') && user_pers.includes('F') && user_pers.includes('P')){
+            category = "The Performer";
+        }
+        if(user_pers.includes('E') && user_pers.includes('S') && user_pers.includes('F') && user_pers.includes('J')){
+            category = "The Caregiver";
+        }
+        if(user_pers.includes('E') && user_pers.includes('N') && user_pers.includes('F') && user_pers.includes('P')){
+            category = "The Champion";
+        }
+        if(user_pers.includes('E') && user_pers.includes('N') && user_pers.includes('F') && user_pers.includes('J')){
+            category = "The Giver";
+        }
+        if(user_pers.includes('E') && user_pers.includes('N') && user_pers.includes('T') && user_pers.includes('P')){
+            category = "The Debater";
+        }
+        if(user_pers.includes('E') && user_pers.includes('N') && user_pers.includes('T') && user_pers.includes('J')){
+            category = "The Commander";
+        }
+
+        let msg = "Working";
+
+        send_email(email, msg, category);
+
+        console.log(category);
+
+        function send_email(email, msg, category){
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "atikshaikh436@gmail.com",
+                Password: "chnthykldcwsgnvd",
+                To: `${email}`,
+                From: "atikshaikh436@gmail.com",
+                Subject: `Hurray! you are The ${category}`,
+                Body: `${msg}`,
+
+            }).then((message) => alert("Mail has been succesfully sent!"))
+        }
+
     
 
     };

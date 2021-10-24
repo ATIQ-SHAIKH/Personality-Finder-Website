@@ -1006,11 +1006,10 @@
             </label>
             Agree 
             <hr>
-              <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email to get results by mail">
-              <p class="fw-bolder">We'll never share your email with anyone else.</p>
+              <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email to get results by mail" aria-required="true" required>
+              <p class="fw-bolder">Make sure you attempt all questions</p>
             </div>
             <button type="submit" onclick="a()">Submit</button>
-            <div class="invisible-container"> Please attempt all questions!</div>
           </form>
         </div>
         
@@ -1018,6 +1017,7 @@
       <main>
         
       </main>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script type="text/javascript" src="quiz.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
