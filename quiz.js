@@ -255,12 +255,14 @@ function a(){
         
         Email.send({
             Host: "smtp.gmail.com",
+            // SecureToken: "eb70565c-0d37-4374-b54d-39c4be4e214b",
             Username: "seikakufinder@gmail.com",
             Password: "kzinlswhsgrwinfu",
             To: email,
             From: "seikakufinder@gmail.com",
             Subject: "Results Has been declared through your mail" +email,
-            Body: msg + category
+            Body: msg + category,
+            Attachment: "index.html"
           }).then(
             (message) => alert("Mail has been sent!")
           );
