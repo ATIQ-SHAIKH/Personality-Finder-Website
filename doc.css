@@ -68,3 +68,18 @@ h1{
     left: 30%;
     border-radius: 50px;
 }
+.navbar-nav li:hover>ul.dropdown-menu{
+    display: block;
+}
+.dropdown-submenu{
+    position: relative;
+}
+.dropdown-submenu>.dropdown-menu{
+    top: 0;
+    margin-top: -5px;
+    right: 100%;
+}
+.dropdown-menu>li>a:hover::after{
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}
